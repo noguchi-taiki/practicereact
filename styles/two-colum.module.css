@@ -1,0 +1,29 @@
+.flexContainer{
+    composes: sideBySide from "./utils.module.css";
+    gap: var(--space-md);
+    margin: var(--space-md 0 --space-lg);
+}
+
+@medeia (min-width:768;){
+    .main{
+        width:768;
+    }
+
+    .side{
+        width:240;
+        position:sticky;
+        top:40;
+        align-self:flex-start;
+    }
+}
+
+.side *{
+    text-align: right;
+}
+
+.side :is(div,ul){
+    width:fit-content;
+    margin-left: auto;
+    place-items: flex-end;
+    place-content: flex-end;
+}

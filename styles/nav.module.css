@@ -1,0 +1,24 @@
+.list{
+    display: flex;
+    gap: 2em;
+}
+
+/* .list a:hover{
+    color: var(--accent);
+} */
+
+@media (hover:hover){
+    .list a:hover{
+        color: var(--accent);
+    }
+}
+
+@media (hover:none) {
+    .list a{
+        -webkit-tap-highlight-color: transparent;
+        /* モバイルメディア使用時のタップされた時の挙動をいじるプロパティ */
+    }
+    .list a:active{
+        color: var(--accent);
+    }
+}
